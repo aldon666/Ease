@@ -1,0 +1,19 @@
+//
+//  EaseChatPrefixHeader.pch
+//  EaseChat_修订版
+//
+//  Created by lanou3g on 16/6/20.
+//  Copyright © 2016年 Terry. All rights reserved.
+//
+
+#ifndef EaseChatPrefixHeader_pch
+#define EaseChatPrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+#import "EaseMob.h"
+
+
+#endif /* EaseChatPrefixHeader_pch */

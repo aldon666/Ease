@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MenuView">
+            <rect key="frame" x="0.0" y="0.0" width="215" height="520"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="个人中心" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wpF-Rl-GaO">
+                    <rect key="frame" x="54" y="15" width="107" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="KKD-HZ-n9Y">
+                    <rect key="frame" x="53" y="51" width="110" height="110"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="110" id="pKA-zP-3Sp"/>
+                        <constraint firstAttribute="height" constant="110" id="vNi-6g-roD"/>
+                    </constraints>
+                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="y4g-Dp-PrJ">
+                    <rect key="frame" x="0.0" y="166" width="215" height="349"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="Xei-RX-8TH"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="PM4-Sn-4sA"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="y4g-Dp-PrJ" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="2Gd-Rc-2SF"/>
+                <constraint firstItem="wpF-Rl-GaO" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="1/2" id="3pu-F1-wb4"/>
+                <constraint firstItem="wpF-Rl-GaO" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="NBW-cM-fjp"/>
+                <constraint firstItem="y4g-Dp-PrJ" firstAttribute="top" secondItem="KKD-HZ-n9Y" secondAttribute="bottom" constant="5" id="ROS-UZ-A8T"/>
+                <constraint firstItem="KKD-HZ-n9Y" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="SXG-c2-BA5"/>
+                <constraint firstAttribute="bottom" secondItem="y4g-Dp-PrJ" secondAttribute="bottom" constant="5" id="T1y-aU-PzK"/>
+                <constraint firstItem="wpF-Rl-GaO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="WsA-PN-iqs"/>
+                <constraint firstItem="KKD-HZ-n9Y" firstAttribute="top" secondItem="wpF-Rl-GaO" secondAttribute="bottom" constant="15" id="hf0-5l-B3F"/>
+                <constraint firstItem="y4g-Dp-PrJ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="kto-nu-zNi"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="myTableView" destination="y4g-Dp-PrJ" id="cgT-bR-WKh"/>
+            </connections>
+            <point key="canvasLocation" x="174.5" y="404"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="2.jpg" width="554" height="739"/>
+    </resources>
+</document>

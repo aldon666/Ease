@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DuM-EM-Rjt">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="350"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="350" id="RIg-5t-Erm"/>
+                    </constraints>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="al4-hH-Jf8">
+                    <rect key="frame" x="120" y="450" width="174" height="60"/>
+                    <color key="backgroundColor" red="0.63819185099999998" green="0.7988424677" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="GG8-8x-890"/>
+                    </constraints>
+                    <state key="normal" title="退出登录"/>
+                    <connections>
+                        <action selector="logOffAction:" destination="-1" eventType="touchUpInside" id="L9g-bj-lut"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="DuM-EM-Rjt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="4Tf-Fs-mTN"/>
+                <constraint firstItem="al4-hH-Jf8" firstAttribute="top" secondItem="DuM-EM-Rjt" secondAttribute="bottom" constant="100" id="H1W-qk-OMP"/>
+                <constraint firstAttribute="trailing" secondItem="al4-hH-Jf8" secondAttribute="trailing" constant="120" id="Xa0-UX-Oht"/>
+                <constraint firstItem="DuM-EM-Rjt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="aGa-k7-cpv"/>
+                <constraint firstAttribute="trailing" secondItem="DuM-EM-Rjt" secondAttribute="trailing" id="gOC-Xk-LXf"/>
+                <constraint firstItem="al4-hH-Jf8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="120" id="kq7-e0-PBC"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+            <point key="canvasLocation" x="77" y="296"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,5 @@
+platform:ios, '9.2'
+target 'EaseChat_2.0' do
+pod 'EaseMobSDK'
+end
+
