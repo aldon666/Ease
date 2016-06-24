@@ -95,6 +95,12 @@
 		D6408A4C1D1A442C0084F050 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6408A461D1A442C0084F050 /* MenuCell.xib */; };
 		D6408A4D1D1A442C0084F050 /* MenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6408A481D1A442C0084F050 /* MenuView.m */; };
 		D6408A4E1D1A442C0084F050 /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6408A491D1A442C0084F050 /* MenuView.xib */; };
+		D6DA19401D1D5CE600268ED9 /* image1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6DA19391D1D5CE600268ED9 /* image1.jpg */; };
+		D6DA19411D1D5CE600268ED9 /* image2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6DA193A1D1D5CE600268ED9 /* image2.jpg */; };
+		D6DA19421D1D5CE600268ED9 /* image3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6DA193B1D1D5CE600268ED9 /* image3.jpg */; };
+		D6DA19431D1D5CE600268ED9 /* image4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6DA193C1D1D5CE600268ED9 /* image4.jpg */; };
+		D6DA19441D1D5CE600268ED9 /* image5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6DA193D1D1D5CE600268ED9 /* image5.jpg */; };
+		D6DA19451D1D5CE600268ED9 /* ZLCGuidePageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DA193F1D1D5CE600268ED9 /* ZLCGuidePageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -215,6 +221,13 @@
 		D6408A471D1A442C0084F050 /* MenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuView.h; sourceTree = "<group>"; };
 		D6408A481D1A442C0084F050 /* MenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuView.m; sourceTree = "<group>"; };
 		D6408A491D1A442C0084F050 /* MenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
+		D6DA19391D1D5CE600268ED9 /* image1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image1.jpg; sourceTree = "<group>"; };
+		D6DA193A1D1D5CE600268ED9 /* image2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image2.jpg; sourceTree = "<group>"; };
+		D6DA193B1D1D5CE600268ED9 /* image3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image3.jpg; sourceTree = "<group>"; };
+		D6DA193C1D1D5CE600268ED9 /* image4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image4.jpg; sourceTree = "<group>"; };
+		D6DA193D1D1D5CE600268ED9 /* image5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image5.jpg; sourceTree = "<group>"; };
+		D6DA193E1D1D5CE600268ED9 /* ZLCGuidePageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLCGuidePageView.h; sourceTree = "<group>"; };
+		D6DA193F1D1D5CE600268ED9 /* ZLCGuidePageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLCGuidePageView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -353,6 +366,7 @@
 		D64089B11D1A39A30084F050 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				D6DA19371D1D5CE600268ED9 /* ZLCGuidePage */,
 				D64089B51D1A3A3A0084F050 /* 联系人 */,
 				D64089B91D1A3A3A0084F050 /* 消息 */,
 				D64089BD1D1A3A9C0084F050 /* 左滑个人中心 */,
@@ -571,6 +585,28 @@
 			path = JKSideSlipView;
 			sourceTree = "<group>";
 		};
+		D6DA19371D1D5CE600268ED9 /* ZLCGuidePage */ = {
+			isa = PBXGroup;
+			children = (
+				D6DA19381D1D5CE600268ED9 /* Resource */,
+				D6DA193E1D1D5CE600268ED9 /* ZLCGuidePageView.h */,
+				D6DA193F1D1D5CE600268ED9 /* ZLCGuidePageView.m */,
+			);
+			path = ZLCGuidePage;
+			sourceTree = "<group>";
+		};
+		D6DA19381D1D5CE600268ED9 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				D6DA19391D1D5CE600268ED9 /* image1.jpg */,
+				D6DA193A1D1D5CE600268ED9 /* image2.jpg */,
+				D6DA193B1D1D5CE600268ED9 /* image3.jpg */,
+				D6DA193C1D1D5CE600268ED9 /* image4.jpg */,
+				D6DA193D1D1D5CE600268ED9 /* image5.jpg */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		E19FC8B4DA80F469695D0A7F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -648,12 +684,14 @@
 				D6084C191D1B8C3F00F7EC6D /* 多云.jpg in Resources */,
 				D64089FE1D1A3B510084F050 /* 直播.png in Resources */,
 				D64089FD1D1A3B510084F050 /* 阅读.png in Resources */,
+				D6DA19441D1D5CE600268ED9 /* image5.jpg in Resources */,
 				D6084C331D1BDE4900F7EC6D /* 4_circle@2x.png in Resources */,
 				D6084C3A1D1BDE4900F7EC6D /* keep_logo.png in Resources */,
 				D64089FC1D1A3B510084F050 /* 游戏.png in Resources */,
 				D6408A211D1A3C0A0084F050 /* MXMQTableViewCell.xib in Resources */,
 				D63044AD1D1D0EFA00217DE2 /* 登录背景.jpg in Resources */,
 				D6084C3C1D1BDE4900F7EC6D /* keep_logo@3x.png in Resources */,
+				D6DA19411D1D5CE600268ED9 /* image2.jpg in Resources */,
 				D63044B21D1D107800217DE2 /* 头像.png in Resources */,
 				D64089F81D1A3B510084F050 /* 消息.png in Resources */,
 				D6408A3B1D1A3EFF0084F050 /* MXMQTableViewController.xib in Resources */,
@@ -686,8 +724,11 @@
 				D64089ED1D1A3B510084F050 /* 附近.png in Resources */,
 				D64089A11D1A374D0084F050 /* LaunchScreen.storyboard in Resources */,
 				D64089F31D1A3B510084F050 /* 钱包.png in Resources */,
+				D6DA19431D1D5CE600268ED9 /* image4.jpg in Resources */,
 				D64089FB1D1A3B510084F050 /* 音乐.png in Resources */,
+				D6DA19421D1D5CE600268ED9 /* image3.jpg in Resources */,
 				D6084C311D1BDE4900F7EC6D /* 1.mp4 in Resources */,
+				D6DA19401D1D5CE600268ED9 /* image1.jpg in Resources */,
 				D63044AE1D1D0EFA00217DE2 /* 注册背景.jpg in Resources */,
 				D6084C1D1D1B8C3F00F7EC6D /* 阵雨.jpg in Resources */,
 				D6084C391D1BDE4900F7EC6D /* keep6plus@3x.png in Resources */,
@@ -782,6 +823,7 @@
 				D6408A0B1D1A3BF10084F050 /* LoginViewController.m in Sources */,
 				D6408A301D1A3CDE0084F050 /* RootViewController.m in Sources */,
 				D6408A2D1D1A3C200084F050 /* ContactTableViewController.m in Sources */,
+				D6DA19451D1D5CE600268ED9 /* ZLCGuidePageView.m in Sources */,
 				D6408A331D1A3D020084F050 /* AppDelegate.m in Sources */,
 				D6084C0F1D1B893100F7EC6D /* WindModel.m in Sources */,
 				D6408A241D1A3C0A0084F050 /* SettingViewController.m in Sources */,

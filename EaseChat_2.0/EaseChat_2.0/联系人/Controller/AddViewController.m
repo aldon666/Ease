@@ -27,6 +27,9 @@
         NSLog(@"添加成功");
     }
 }
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self.rosterUserNameTF resignFirstResponder];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

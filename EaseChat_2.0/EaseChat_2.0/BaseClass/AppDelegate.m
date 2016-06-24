@@ -10,7 +10,7 @@
 #import "RootViewController.h"
 #import "LoginViewController.h"
 #import "EaseChatPrefixHeader.pch"
-
+#import "ZLCGuidePageView.h"
 @interface AppDelegate ()
 
 @end
@@ -47,8 +47,24 @@
                                                           completion:^(NSDictionary *loginInfo, EMError *error) {
                                                           } onQueue:nil];
     }else {
+        // 用户验证失败
         [self userAuthenticationFailed];
     }
+    
+    
+    //判断是否为第一次启动，若为第一次启动这执行引导页
+    if(![[NSUserDefaults standardUserDefaults] boolForKey:@"firstStart"]){
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"firstStart"];
+        NSArray *arr = @[[UIImage imageNamed:@"image1.jpg"],[UIImage imageNamed:@"image2.jpg"],[UIImage imageNamed:@"image3.jpg"],[UIImage imageNamed:@"image4.jpg"],[UIImage imageNamed:@"image5.jpg"]];
+        
+        ZLCGuidePageView *pageView = [[ZLCGuidePageView alloc]initWithFrame:self.window.frame WithImages:arr];
+        //注意若项目是以navigationController为根视图，请讲guidepage添加在根视图view上
+        [self.window addSubview:pageView];
+    }
+
+    
+    
+    
     return YES;
 }
 

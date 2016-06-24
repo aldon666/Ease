@@ -15,13 +15,6 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DuM-EM-Rjt">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="350"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="350" id="RIg-5t-Erm"/>
-                    </constraints>
-                </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="al4-hH-Jf8">
                     <rect key="frame" x="120" y="450" width="174" height="60"/>
                     <color key="backgroundColor" red="0.63819185099999998" green="0.7988424677" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -33,6 +26,13 @@
                         <action selector="logOffAction:" destination="-1" eventType="touchUpInside" id="L9g-bj-lut"/>
                     </connections>
                 </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DuM-EM-Rjt">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="350"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="350" id="RIg-5t-Erm"/>
+                    </constraints>
+                </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
