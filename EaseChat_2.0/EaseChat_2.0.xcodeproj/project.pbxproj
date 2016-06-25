@@ -92,6 +92,9 @@
 		D6408A4C1D1A442C0084F050 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6408A461D1A442C0084F050 /* MenuCell.xib */; };
 		D6408A4D1D1A442C0084F050 /* MenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6408A481D1A442C0084F050 /* MenuView.m */; };
 		D6408A4E1D1A442C0084F050 /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6408A491D1A442C0084F050 /* MenuView.xib */; };
+		D6525F081D1E3BD100BBC8C0 /* ChatConsoleView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6525F041D1E3BD100BBC8C0 /* ChatConsoleView.m */; };
+		D6525F091D1E3BD100BBC8C0 /* MXMQTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6525F061D1E3BD100BBC8C0 /* MXMQTableViewCell.m */; };
+		D6525F0A1D1E3BD100BBC8C0 /* MXMQTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6525F071D1E3BD100BBC8C0 /* MXMQTableViewCell.xib */; };
 		D6DA19401D1D5CE600268ED9 /* image1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6DA19391D1D5CE600268ED9 /* image1.jpg */; };
 		D6DA19411D1D5CE600268ED9 /* image2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6DA193A1D1D5CE600268ED9 /* image2.jpg */; };
 		D6DA19421D1D5CE600268ED9 /* image3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6DA193B1D1D5CE600268ED9 /* image3.jpg */; };
@@ -213,6 +216,11 @@
 		D6408A471D1A442C0084F050 /* MenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuView.h; sourceTree = "<group>"; };
 		D6408A481D1A442C0084F050 /* MenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuView.m; sourceTree = "<group>"; };
 		D6408A491D1A442C0084F050 /* MenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
+		D6525F031D1E3BD100BBC8C0 /* ChatConsoleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatConsoleView.h; sourceTree = "<group>"; };
+		D6525F041D1E3BD100BBC8C0 /* ChatConsoleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatConsoleView.m; sourceTree = "<group>"; };
+		D6525F051D1E3BD100BBC8C0 /* MXMQTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXMQTableViewCell.h; sourceTree = "<group>"; };
+		D6525F061D1E3BD100BBC8C0 /* MXMQTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXMQTableViewCell.m; sourceTree = "<group>"; };
+		D6525F071D1E3BD100BBC8C0 /* MXMQTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MXMQTableViewCell.xib; sourceTree = "<group>"; };
 		D6DA19391D1D5CE600268ED9 /* image1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image1.jpg; sourceTree = "<group>"; };
 		D6DA193A1D1D5CE600268ED9 /* image2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image2.jpg; sourceTree = "<group>"; };
 		D6DA193B1D1D5CE600268ED9 /* image3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image3.jpg; sourceTree = "<group>"; };
@@ -455,9 +463,9 @@
 		D64089B91D1A3A3A0084F050 /* 消息 */ = {
 			isa = PBXGroup;
 			children = (
+				D6525F011D1E3BB500BBC8C0 /* Model */,
+				D6525F021D1E3BB500BBC8C0 /* View */,
 				D64089BA1D1A3A3A0084F050 /* Controller */,
-				D64089BB1D1A3A3A0084F050 /* Model */,
-				D64089BC1D1A3A3A0084F050 /* View */,
 			);
 			name = "消息";
 			path = "../消息";
@@ -474,20 +482,6 @@
 				D6408A3E1D1A3F500084F050 /* ChatViewController 16-56-04-834.xib */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		D64089BB1D1A3A3A0084F050 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		D64089BC1D1A3A3A0084F050 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		D64089BD1D1A3A9C0084F050 /* 左滑个人中心 */ = {
@@ -570,6 +564,25 @@
 				D6408A491D1A442C0084F050 /* MenuView.xib */,
 			);
 			path = JKSideSlipView;
+			sourceTree = "<group>";
+		};
+		D6525F011D1E3BB500BBC8C0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D6525F021D1E3BB500BBC8C0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D6525F031D1E3BD100BBC8C0 /* ChatConsoleView.h */,
+				D6525F041D1E3BD100BBC8C0 /* ChatConsoleView.m */,
+				D6525F051D1E3BD100BBC8C0 /* MXMQTableViewCell.h */,
+				D6525F061D1E3BD100BBC8C0 /* MXMQTableViewCell.m */,
+				D6525F071D1E3BD100BBC8C0 /* MXMQTableViewCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		D6DA19371D1D5CE600268ED9 /* ZLCGuidePage */ = {
@@ -680,6 +693,7 @@
 				D6DA19411D1D5CE600268ED9 /* image2.jpg in Resources */,
 				D63044B21D1D107800217DE2 /* 头像.png in Resources */,
 				D64089F81D1A3B510084F050 /* 消息.png in Resources */,
+				D6525F0A1D1E3BD100BBC8C0 /* MXMQTableViewCell.xib in Resources */,
 				D6408A3B1D1A3EFF0084F050 /* MXMQTableViewController.xib in Resources */,
 				D64089F61D1A3B510084F050 /* 文件.png in Resources */,
 				D6408A251D1A3C0A0084F050 /* SettingViewController.xib in Resources */,
@@ -792,6 +806,7 @@
 				D6408A361D1A3DBD0084F050 /* CXRSplitController.m in Sources */,
 				D6408A091D1A3BF10084F050 /* ContactTableViewCell.m in Sources */,
 				D6408A4B1D1A442C0084F050 /* MenuCell.m in Sources */,
+				D6525F081D1E3BD100BBC8C0 /* ChatConsoleView.m in Sources */,
 				D64089D41D1A3B200084F050 /* SSColorfulRefresh.m in Sources */,
 				D6408A2B1D1A3C200084F050 /* AddViewController.m in Sources */,
 				D6084C0D1D1B893100F7EC6D /* Weather.m in Sources */,
@@ -804,6 +819,7 @@
 				D6084BFB1D1B88D100F7EC6D /* WeatherViewController.m in Sources */,
 				D6408A0D1D1A3BF10084F050 /* RegisterViewController.m in Sources */,
 				D6084C0C1D1B893100F7EC6D /* RealtimeModel.m in Sources */,
+				D6525F091D1E3BD100BBC8C0 /* MXMQTableViewCell.m in Sources */,
 				D6408A0B1D1A3BF10084F050 /* LoginViewController.m in Sources */,
 				D6408A301D1A3CDE0084F050 /* RootViewController.m in Sources */,
 				D6408A2D1D1A3C200084F050 /* ContactTableViewController.m in Sources */,
