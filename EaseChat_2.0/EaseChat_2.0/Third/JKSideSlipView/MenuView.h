@@ -13,6 +13,7 @@ typedef void (^didSelectRowAtIndexPath)(id cell, NSIndexPath *indexPath);
 {
     didSelectRowAtIndexPath _didSelectRowAtIndexPath;
 }
+@property (weak, nonatomic) IBOutlet UIButton *signOutBtn;
 +(instancetype)menuView;
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
 @property (nonatomic, strong) NSArray *items;

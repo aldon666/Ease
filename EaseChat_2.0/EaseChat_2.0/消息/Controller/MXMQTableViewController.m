@@ -96,7 +96,7 @@
 ////    cell.textLabel.text = @"测试数据";
     
     EMConversation *conversation = self.rosters[indexPath.row];
-    cell.textLabel.text = conversation.chatter;
+    cell.textLabel.text = conversation.chatter;                   
     EMMessage *message = [conversation latestMessage];
     EMTextMessageBody *body = [message.messageBodies lastObject];
     cell.detailTextLabel.text = body.text;
@@ -124,6 +124,22 @@
     [self.navigationController pushViewController:chatVC animated:YES];
 }
 
+
+- (NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewRowAction *action1 = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"删除" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+        ChatViewController *chatVC = [[ChatViewController alloc] init];
+        
+        EMConversation *conversation = self.rosters[indexPath.row];
+        
+        chatVC.chatter = conversation.chatter;
+
+        [[EaseMob sharedInstance].chatManager removeConversationByChatter:chatVC.chatter deleteMessages:YES append2Chat:YES];
+        NSLog(@"删除成功");
+        [self.rosters removeObjectAtIndex:indexPath.row];
+        [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }];
+    return @[action1];
+}
 
 
 - (void)didReceiveBuddyRequest:(NSString *)username message:(NSString *)message {

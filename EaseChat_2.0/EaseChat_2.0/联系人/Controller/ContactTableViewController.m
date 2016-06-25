@@ -156,8 +156,22 @@
 }
 
 
-
-
+- (NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewRowAction *action1 = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"删除" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+        EMError *error = nil;
+        // 删除好友
+        EMBuddy * buddy = _rosters[indexPath.row];
+        NSString *username = buddy.username;
+        BOOL isSuccess = [[EaseMob sharedInstance].chatManager removeBuddy:username removeFromRemote:YES error:&error];
+        if (isSuccess && !error) {
+            NSLog(@"删除成功");
+            [_rosters removeObjectAtIndex:indexPath.row];
+            [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            [[EaseMob sharedInstance].chatManager removeConversationByChatter:username deleteMessages:YES append2Chat:YES];
+        }
+    }];
+    return @[action1];
+}
 //好友请求
 - (void)didReceiveBuddyRequest:(NSString *)username message:(NSString *)message {
     

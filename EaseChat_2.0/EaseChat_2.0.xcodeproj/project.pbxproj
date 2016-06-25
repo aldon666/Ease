@@ -650,7 +650,7 @@
 				TargetAttributes = {
 					D640898D1D1A374D0084F050 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = X6F8KD5PFD;
+						DevelopmentTeam = B72735EDT5;
 					};
 				};
 			};
@@ -930,12 +930,14 @@
 			baseConfigurationReference = 31306F35571BA39D1CFE23D8 /* Pods-EaseChat_2.0.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				GCC_PREFIX_HEADER = EaseChat_2.0/EaseChatPrefixHeader.pch;
 				INFOPLIST_FILE = EaseChat_2.0/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Terry.EaseChat-2-0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -947,12 +949,14 @@
 			baseConfigurationReference = 4506265B9A04F46B54A8D969 /* Pods-EaseChat_2.0.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				GCC_PREFIX_HEADER = EaseChat_2.0/EaseChatPrefixHeader.pch;
 				INFOPLIST_FILE = EaseChat_2.0/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Terry.EaseChat-2-0";
 				PRODUCT_NAME = "$(TARGET_NAME)";

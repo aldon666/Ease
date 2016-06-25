@@ -3,10 +3,12 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingViewController">
             <connections>
+                <outlet property="settingTableView" destination="DuM-EM-Rjt" id="FEv-vv-pla"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,33 +17,29 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="al4-hH-Jf8">
-                    <rect key="frame" x="120" y="450" width="174" height="60"/>
-                    <color key="backgroundColor" red="0.63819185099999998" green="0.7988424677" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="60" id="GG8-8x-890"/>
-                    </constraints>
-                    <state key="normal" title="退出登录"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DuM-EM-Rjt">
+                    <rect key="frame" x="0.0" y="45" width="414" height="671"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="en5-QU-RDb">
+                    <rect key="frame" x="5" y="10" width="104" height="30"/>
+                    <state key="normal" title="&lt;&lt;返回">
+                        <color key="titleColor" red="0.95054810209999996" green="0.0030522937640000002" blue="0.0666226922" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
                     <connections>
-                        <action selector="logOffAction:" destination="-1" eventType="touchUpInside" id="L9g-bj-lut"/>
+                        <action selector="backAction:" destination="-1" eventType="touchUpInside" id="5vC-mX-Cby"/>
                     </connections>
                 </button>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DuM-EM-Rjt">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="350"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="350" id="RIg-5t-Erm"/>
-                    </constraints>
-                </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="DuM-EM-Rjt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="4Tf-Fs-mTN"/>
-                <constraint firstItem="al4-hH-Jf8" firstAttribute="top" secondItem="DuM-EM-Rjt" secondAttribute="bottom" constant="100" id="H1W-qk-OMP"/>
-                <constraint firstAttribute="trailing" secondItem="al4-hH-Jf8" secondAttribute="trailing" constant="120" id="Xa0-UX-Oht"/>
-                <constraint firstItem="DuM-EM-Rjt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="aGa-k7-cpv"/>
-                <constraint firstAttribute="trailing" secondItem="DuM-EM-Rjt" secondAttribute="trailing" id="gOC-Xk-LXf"/>
-                <constraint firstItem="al4-hH-Jf8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="120" id="kq7-e0-PBC"/>
+                <constraint firstItem="DuM-EM-Rjt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="CfF-gW-1g0"/>
+                <constraint firstItem="en5-QU-RDb" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="1/4" id="d4Q-4n-aYZ"/>
+                <constraint firstItem="en5-QU-RDb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="gH3-1i-QSh"/>
+                <constraint firstItem="DuM-EM-Rjt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="45" id="gPZ-bF-mgi"/>
+                <constraint firstAttribute="trailing" secondItem="DuM-EM-Rjt" secondAttribute="trailing" id="o3O-nE-1H3"/>
+                <constraint firstItem="en5-QU-RDb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="5" id="oCT-Ze-xPQ"/>
+                <constraint firstAttribute="bottom" secondItem="DuM-EM-Rjt" secondAttribute="bottom" constant="20" id="tHT-U9-jEu"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
             <point key="canvasLocation" x="77" y="296"/>

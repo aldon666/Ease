@@ -26,7 +26,7 @@
                     </constraints>
                 </imageView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="y4g-Dp-PrJ">
-                    <rect key="frame" x="0.0" y="166" width="215" height="349"/>
+                    <rect key="frame" x="0.0" y="166" width="215" height="264"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     <connections>
@@ -34,22 +34,33 @@
                         <outlet property="delegate" destination="iN0-l3-epB" id="PM4-Sn-4sA"/>
                     </connections>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="15Y-wY-vtI">
+                    <rect key="frame" x="27" y="455" width="162" height="30"/>
+                    <color key="backgroundColor" red="1" green="0.97827091692034263" blue="0.4754872195464781" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="退出登录">
+                        <color key="titleShadowColor" red="1" green="0.72367856687134702" blue="0.47087290846995289" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="y4g-Dp-PrJ" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="2Gd-Rc-2SF"/>
                 <constraint firstItem="wpF-Rl-GaO" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="1/2" id="3pu-F1-wb4"/>
                 <constraint firstItem="wpF-Rl-GaO" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="NBW-cM-fjp"/>
-                <constraint firstItem="y4g-Dp-PrJ" firstAttribute="top" secondItem="KKD-HZ-n9Y" secondAttribute="bottom" constant="5" id="ROS-UZ-A8T"/>
+                <constraint firstAttribute="bottom" secondItem="y4g-Dp-PrJ" secondAttribute="bottom" constant="90" id="QcC-4v-oQG"/>
                 <constraint firstItem="KKD-HZ-n9Y" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="SXG-c2-BA5"/>
-                <constraint firstAttribute="bottom" secondItem="y4g-Dp-PrJ" secondAttribute="bottom" constant="5" id="T1y-aU-PzK"/>
+                <constraint firstItem="15Y-wY-vtI" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="UBV-tp-ZOf"/>
+                <constraint firstItem="y4g-Dp-PrJ" firstAttribute="top" secondItem="KKD-HZ-n9Y" secondAttribute="bottom" constant="5" id="VH4-7s-bYc"/>
                 <constraint firstItem="wpF-Rl-GaO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="WsA-PN-iqs"/>
+                <constraint firstItem="y4g-Dp-PrJ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="YeT-n6-qWR"/>
                 <constraint firstItem="KKD-HZ-n9Y" firstAttribute="top" secondItem="wpF-Rl-GaO" secondAttribute="bottom" constant="15" id="hf0-5l-B3F"/>
-                <constraint firstItem="y4g-Dp-PrJ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="kto-nu-zNi"/>
+                <constraint firstAttribute="bottom" secondItem="15Y-wY-vtI" secondAttribute="bottom" constant="35" id="j8w-oC-MUb"/>
+                <constraint firstItem="y4g-Dp-PrJ" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="mne-Uw-ayt"/>
+                <constraint firstItem="15Y-wY-vtI" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="3/4" id="pFK-JT-boq"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="myTableView" destination="y4g-Dp-PrJ" id="cgT-bR-WKh"/>
+                <outlet property="signOutBtn" destination="15Y-wY-vtI" id="YH3-UN-2Vm"/>
                 <outlet property="userImage" destination="KKD-HZ-n9Y" id="qyg-D7-HXz"/>
             </connections>
             <point key="canvasLocation" x="174.5" y="404"/>

@@ -42,7 +42,7 @@
         } else {
             
             // 显示错误信息的警告
-            [self showAlertControllerWithError:error];
+            [weakSelf showAlertControllerWithError:error];
         }
     } onQueue:dispatch_get_main_queue()];
    

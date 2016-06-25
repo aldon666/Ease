@@ -265,12 +265,14 @@
         
         cell.textLabel.text = body.text;
         cell.detailTextLabel.text = @"";
-        
         cell.textLabel.textAlignment = NSTextAlignmentLeft;
     }
     
     return cell;
 }
+
+
+
 
 
 - (void)didReceiveMemoryWarning {

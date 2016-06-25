@@ -11,6 +11,7 @@
 #import "RootViewController.h"
 
 @interface SettingViewController ()
+@property (weak, nonatomic) IBOutlet UITableView *settingTableView;
 
 @end
 
@@ -20,29 +21,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }
-//退出登录
-- (IBAction)logOffAction:(UIButton *)sender {
-    
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"确认注销登录吗" message:@"" preferredStyle:(UIAlertControllerStyleActionSheet)];
-    [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:(UIAlertActionStyleDestructive) handler:^(UIAlertAction * _Nonnull action) {
-        EMError *error = nil;
-        NSDictionary *info = [[EaseMob sharedInstance].chatManager logoffWithUnbindDeviceToken:NO error:&error];
-        if (!error && info) {
-            //关闭自动登录
-            [[EaseMob sharedInstance].chatManager disableAutoLogin];
-            NSLog(@"退出成功");
-            LoginViewController *lo = [[LoginViewController alloc]init];
-            [self.navigationController pushViewController:lo animated:YES];
-        }
-    }]];
-    [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
-        
-    }]];
-    [self presentViewController:alert animated:YES completion:^{
-        
-    }];
-    
+
+- (IBAction)backAction:(UIButton *)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

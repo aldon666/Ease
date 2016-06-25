@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [self requestWeatherByCityName:@"北京"];
+    _city.text = @"北京";
 }
 
 - (void)requestWeatherByCityName:(NSString *)cityName{
@@ -44,8 +46,6 @@
             _quality.text = [WeatherManager sharedWeatherManager].pm252.quality;
             _des.text = [WeatherManager sharedWeatherManager].pm252.des;
             
-            _city.text = _cityNameTF.text;
-            
             self.backImgview.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",[WeatherManager sharedWeatherManager].weather.info]];
         });
     }];
@@ -53,10 +53,24 @@
 }
 - (IBAction)demand:(UIButton *)sender {
     if (_cityNameTF.text == nil || [_cityNameTF.text  isEqual: @""]) {
-        return;
+            return;
     }else{
-    [self requestWeatherByCityName:_cityNameTF.text];
+        [self requestWeatherByCityName:_cityNameTF.text];
+        _city.text = _cityNameTF.text;
     }
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    NSError *error;
+    UIAlertController * alertController = [UIAlertController alertControllerWithTitle:@"请输入国内城市(例如:北京)" message:error.description preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction * actionCancel = [UIAlertAction actionWithTitle:@"好" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+    }];
+    
+    [alertController addAction:actionCancel];
+    
+    [self showDetailViewController:alertController sender:nil];
 }
 
 - (IBAction)back:(UIButton *)sender {

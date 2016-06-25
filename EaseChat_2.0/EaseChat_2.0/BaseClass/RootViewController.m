@@ -61,6 +61,7 @@
     menu.userImage.layer.masksToBounds = YES;
     menu.userImage.layer.cornerRadius = 55;
     
+    [menu.signOutBtn addTarget:self action:@selector(signOut) forControlEvents:UIControlEventTouchUpInside];
     
     [menu didSelectRowAtIndexPath:^(id cell, NSIndexPath *indexPath) {
         NSLog(@"click");
@@ -93,7 +94,28 @@
     
 }
 
+//退出登录点击事件
+- (void)signOut{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"确认注销登录吗" message:@"" preferredStyle:(UIAlertControllerStyleActionSheet)];
+    [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:(UIAlertActionStyleDestructive) handler:^(UIAlertAction * _Nonnull action) {
+        EMError *error = nil;
+        NSDictionary *info = [[EaseMob sharedInstance].chatManager logoffWithUnbindDeviceToken:NO error:&error];
+        if (!error && info) {
+            //关闭自动登录
+            [[EaseMob sharedInstance].chatManager disableAutoLogin];
+            NSLog(@"退出成功");
+            LoginViewController *lo = [[LoginViewController alloc]init];
+            [self.navigationController pushViewController:lo animated:YES];
+        }
+    }]];
+    [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
+        
+    }]];
+    [self presentViewController:alert animated:YES completion:^{
+        
+    }];
 
+}
 
 - (void)switchTouched{
     [_sideSlipView switchMenu];
