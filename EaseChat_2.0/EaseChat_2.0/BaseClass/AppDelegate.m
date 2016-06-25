@@ -29,9 +29,10 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-//    [[UINavigationBar appearance] setBarStyle:(UIBarStyleBlack)];
-//    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
-//    [[UITabBar appearance] setBarStyle:(UIBarStyleBlack)];
+    [[UINavigationBar appearance] setBarStyle:(UIBarStyleBlack)];
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    [[UITabBar appearance] setBarStyle:(UIBarStyleBlack)];
     
     NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
     NSString *userName = [user objectForKey:@"USERNAME"];

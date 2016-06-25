@@ -83,7 +83,17 @@
     
     UINavigationController * navController = [[UINavigationController alloc]initWithRootViewController:viewCotroller];
 //    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithTitle:@"ceshi" style:UIBarButtonItemStylePlain target:self action:@selector(clickHeadImage:)];
-    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"钱包"] style:UIBarButtonItemStylePlain target:self action:@selector(clickHeadImage:)];
+    
+    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+    NSData *imageData = [user objectForKey:@"USERIMAGE"];
+    UIButton *leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    leftBtn.frame = CGRectMake(0, 0, 40, 40);
+    leftBtn.layer.masksToBounds = YES;
+    leftBtn.layer.cornerRadius = 20;
+    [leftBtn addTarget:self action:@selector(clickHeadImage:) forControlEvents:UIControlEventTouchUpInside];
+    [leftBtn setBackgroundImage:[UIImage imageWithData:imageData] forState:UIControlStateNormal];
+    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithCustomView:leftBtn];
+    
     viewCotroller.navigationItem.leftBarButtonItem = leftButton;
     navController.navigationBar.translucent = NO;
     navController.title = title;

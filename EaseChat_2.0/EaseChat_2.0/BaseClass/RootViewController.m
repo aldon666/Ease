@@ -53,6 +53,15 @@
     
     MenuView *menu = [MenuView menuView];
     
+    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+    NSData *imageData = [user objectForKey:@"USERIMAGE"];
+    UIImage *userImage = [UIImage imageWithData:imageData];
+    menu.userImage.image = userImage;
+    
+    menu.userImage.layer.masksToBounds = YES;
+    menu.userImage.layer.cornerRadius = 55;
+    
+    
     [menu didSelectRowAtIndexPath:^(id cell, NSIndexPath *indexPath) {
         NSLog(@"click");
         [_sideSlipView hide];

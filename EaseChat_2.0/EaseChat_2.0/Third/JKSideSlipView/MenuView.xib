@@ -18,7 +18,7 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="KKD-HZ-n9Y">
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KKD-HZ-n9Y">
                     <rect key="frame" x="53" y="51" width="110" height="110"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="110" id="pKA-zP-3Sp"/>
@@ -50,11 +50,9 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="myTableView" destination="y4g-Dp-PrJ" id="cgT-bR-WKh"/>
+                <outlet property="userImage" destination="KKD-HZ-n9Y" id="qyg-D7-HXz"/>
             </connections>
             <point key="canvasLocation" x="174.5" y="404"/>
         </view>
     </objects>
-    <resources>
-        <image name="2.jpg" width="554" height="739"/>
-    </resources>
 </document>

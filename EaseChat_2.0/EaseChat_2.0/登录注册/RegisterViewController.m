@@ -63,6 +63,10 @@
     NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
     [user setObject:_userNameTF.text forKey:@"USERNAME"];
     [user setObject:_passwordTF.text forKey:@"PASSWORD"];
+    
+    NSData *imageData = UIImagePNGRepresentation(_registerImgView.image);
+    [user setObject:imageData forKey:@"USERIMAGE"];
+    
     NSString *userName = [user objectForKey:@"USERNAME"];
     NSString *password = [user objectForKey:@"PASSWORD"];
     //用户注册的异步block方法
