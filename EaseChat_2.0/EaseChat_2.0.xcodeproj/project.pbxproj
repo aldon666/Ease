@@ -75,9 +75,6 @@
 		D6408A0C1D1A3BF10084F050 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6408A051D1A3BF10084F050 /* LoginViewController.xib */; };
 		D6408A0D1D1A3BF10084F050 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6408A071D1A3BF10084F050 /* RegisterViewController.m */; };
 		D6408A0E1D1A3BF10084F050 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6408A081D1A3BF10084F050 /* RegisterViewController.xib */; };
-		D6408A1D1D1A3C0A0084F050 /* ChatConsoleView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6408A101D1A3C0A0084F050 /* ChatConsoleView.m */; };
-		D6408A201D1A3C0A0084F050 /* MXMQTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6408A151D1A3C0A0084F050 /* MXMQTableViewCell.m */; };
-		D6408A211D1A3C0A0084F050 /* MXMQTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6408A161D1A3C0A0084F050 /* MXMQTableViewCell.xib */; };
 		D6408A241D1A3C0A0084F050 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6408A1B1D1A3C0A0084F050 /* SettingViewController.m */; };
 		D6408A251D1A3C0A0084F050 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6408A1C1D1A3C0A0084F050 /* SettingViewController.xib */; };
 		D6408A2B1D1A3C200084F050 /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6408A271D1A3C200084F050 /* AddViewController.m */; };
@@ -188,11 +185,6 @@
 		D6408A061D1A3BF10084F050 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		D6408A071D1A3BF10084F050 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		D6408A081D1A3BF10084F050 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
-		D6408A0F1D1A3C0A0084F050 /* ChatConsoleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChatConsoleView.h; path = ../Controller/ChatConsoleView.h; sourceTree = "<group>"; };
-		D6408A101D1A3C0A0084F050 /* ChatConsoleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChatConsoleView.m; path = ../Controller/ChatConsoleView.m; sourceTree = "<group>"; };
-		D6408A141D1A3C0A0084F050 /* MXMQTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXMQTableViewCell.h; path = ../Controller/MXMQTableViewCell.h; sourceTree = "<group>"; };
-		D6408A151D1A3C0A0084F050 /* MXMQTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXMQTableViewCell.m; path = ../Controller/MXMQTableViewCell.m; sourceTree = "<group>"; };
-		D6408A161D1A3C0A0084F050 /* MXMQTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MXMQTableViewCell.xib; path = ../Controller/MXMQTableViewCell.xib; sourceTree = "<group>"; };
 		D6408A1A1D1A3C0A0084F050 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingViewController.h; path = "../../../消息/Controller/SettingViewController.h"; sourceTree = "<group>"; };
 		D6408A1B1D1A3C0A0084F050 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingViewController.m; path = "../../../消息/Controller/SettingViewController.m"; sourceTree = "<group>"; };
 		D6408A1C1D1A3C0A0084F050 /* SettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SettingViewController.xib; path = "../../../消息/Controller/SettingViewController.xib"; sourceTree = "<group>"; };
@@ -494,11 +486,6 @@
 		D64089BC1D1A3A3A0084F050 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D6408A141D1A3C0A0084F050 /* MXMQTableViewCell.h */,
-				D6408A151D1A3C0A0084F050 /* MXMQTableViewCell.m */,
-				D6408A161D1A3C0A0084F050 /* MXMQTableViewCell.xib */,
-				D6408A0F1D1A3C0A0084F050 /* ChatConsoleView.h */,
-				D6408A101D1A3C0A0084F050 /* ChatConsoleView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -688,7 +675,6 @@
 				D6084C331D1BDE4900F7EC6D /* 4_circle@2x.png in Resources */,
 				D6084C3A1D1BDE4900F7EC6D /* keep_logo.png in Resources */,
 				D64089FC1D1A3B510084F050 /* 游戏.png in Resources */,
-				D6408A211D1A3C0A0084F050 /* MXMQTableViewCell.xib in Resources */,
 				D63044AD1D1D0EFA00217DE2 /* 登录背景.jpg in Resources */,
 				D6084C3C1D1BDE4900F7EC6D /* keep_logo@3x.png in Resources */,
 				D6DA19411D1D5CE600268ED9 /* image2.jpg in Resources */,
@@ -807,14 +793,12 @@
 				D6408A091D1A3BF10084F050 /* ContactTableViewCell.m in Sources */,
 				D6408A4B1D1A442C0084F050 /* MenuCell.m in Sources */,
 				D64089D41D1A3B200084F050 /* SSColorfulRefresh.m in Sources */,
-				D6408A201D1A3C0A0084F050 /* MXMQTableViewCell.m in Sources */,
 				D6408A2B1D1A3C200084F050 /* AddViewController.m in Sources */,
 				D6084C0D1D1B893100F7EC6D /* Weather.m in Sources */,
 				D6084C0A1D1B893100F7EC6D /* LifeModel.m in Sources */,
 				D64089931D1A374D0084F050 /* main.m in Sources */,
 				D6408A3F1D1A3F500084F050 /* ChatViewController.m in Sources */,
 				D6408A4A1D1A442C0084F050 /* JKSideSlipView.m in Sources */,
-				D6408A1D1D1A3C0A0084F050 /* ChatConsoleView.m in Sources */,
 				D6084C0E1D1B893100F7EC6D /* WeatherManager.m in Sources */,
 				D6408A4D1D1A442C0084F050 /* MenuView.m in Sources */,
 				D6084BFB1D1B88D100F7EC6D /* WeatherViewController.m in Sources */,
