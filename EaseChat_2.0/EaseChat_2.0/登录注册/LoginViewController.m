@@ -11,16 +11,63 @@
 #import "RootViewController.h"
 
 @interface LoginViewController ()
+{
+    NSMutableArray *_arr;
+    
+}
 
 @end
 
 @implementation LoginViewController
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
+-(void)onTimer
+{
+    UIImageView *snow=nil;
+    
+    if (_arr.count>0) {
+        //取雪花
+        snow=[_arr firstObject];
+        [_arr removeObject:snow];
+    }else{
+        //创建雪花
+        snow=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"雪花"]];
+        [self.view addSubview:snow];
+        //[snow release];
+        
+    }
+    snow.frame=CGRectMake(arc4random()%(320-50+1), -50, 50, 50);
+    [UIView beginAnimations:nil context:(__bridge void * _Nullable)(snow)];
+    [UIView setAnimationDuration:5];
+    snow.frame=CGRectMake(arc4random()%(320-50+1), 736, 50, 50);
+    [UIView setAnimationDelegate:self];
+    [UIView setAnimationDidStopSelector:@selector(animationDidStop:finished:context:)];
+    [UIView commitAnimations];
+    
+    
+}
+-(void)animationDidStop:(NSString *)animationID finished:(NSNumber *)finished context:(void *)context
+{
+    UIImageView *snow=(__bridge UIImageView *)context;
+    
+    [_arr addObject:snow];
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.navigationItem setHidesBackButton:YES animated:NO];
     [self.navigationController setNavigationBarHidden:YES];
-    
+    self.view.backgroundColor=[UIColor blackColor];
+    _arr=[[NSMutableArray alloc]initWithCapacity:0];
+    [NSTimer scheduledTimerWithTimeInterval:0.3 target:self selector:@selector(onTimer) userInfo:nil repeats:YES];
+
 }
 //登录按钮的响应事件
 - (IBAction)loginButtonAction:(UIButton *)sender {

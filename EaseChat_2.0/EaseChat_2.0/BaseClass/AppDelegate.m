@@ -11,6 +11,7 @@
 #import "LoginViewController.h"
 #import "EaseChatPrefixHeader.pch"
 #import "ZLCGuidePageView.h"
+#import "YYClipImageTool.h"
 @interface AppDelegate ()
 
 @end
@@ -62,11 +63,40 @@
         //注意若项目是以navigationController为根视图，请讲guidepage添加在根视图view上
         [self.window addSubview:pageView];
     }
-
+    UIImage *image = [UIImage imageNamed:@"xx1.jpg"];
+    [YYClipImageTool addToCurrentView:self.window clipImage:image backgroundImage:@""];
     
+    //设置一个图片;
+    UIImageView *niceView = [[UIImageView alloc] initWithFrame:CGRectMake(0,0, self.window.frame.size.width, self.window.frame.size.height)];
+    UIImageView *tooView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.window.frame.size.width, self.window.frame.size.height)];
+    tooView.image = [UIImage imageNamed:@"xx2.jpg"];
+    niceView.image = [UIImage imageNamed:@"xx1.jpg"];
     
+    //添加到场景
     
-    return YES;
+    [self.window addSubview:tooView];
+    [self.window addSubview:niceView];
+    //放到最顶层;
+    
+    [self.window bringSubviewToFront:niceView];
+    [self.window bringSubviewToFront:tooView];
+    
+    //开始设置动画;
+    [UIView beginAnimations:nil context:nil];
+    
+    niceView.alpha = 0.0;
+    tooView.alpha = 0.5;
+    [UIView setAnimationDuration:1];
+    [UIView setAnimationRepeatCount:24*366*1000000];
+    [UIView setAnimationRepeatAutoreverses:YES];
+    [UIView setAnimationTransition:UIViewAnimationTransitionNone forView:self.window cache:YES];
+    [UIView setAnimationDelegate:self];
+    niceView.alpha = 0.5;
+    tooView.alpha = 0.0;
+    niceView.frame = CGRectMake(0, 0, 414, 736);
+    tooView.frame = CGRectMake(0, 0, 414, 736);
+    [UIView commitAnimations];
+  return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

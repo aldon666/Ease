@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "DD190617E8ED1D8036391281D1225867FB1793F9",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "DD190617E8ED1D8036391281D1225867FB1793F9" : 0,
+    "7D4E98CEFA0DE7AE3C1CA015E60B5D8304238AA2" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "F4804A28-8EB0-4DF6-893F-7DD309470EEF",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "DD190617E8ED1D8036391281D1225867FB1793F9" : "chat\/",
+    "7D4E98CEFA0DE7AE3C1CA015E60B5D8304238AA2" : "%E9%A1%B9%E7%9B%AE%202\/TestScan\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "EaseChat_2.0",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "EaseChat_2.0\/EaseChat_2.0.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/757094197\/TestScan.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7D4E98CEFA0DE7AE3C1CA015E60B5D8304238AA2"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/aldon666\/Ease.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DD190617E8ED1D8036391281D1225867FB1793F9"
+    }
+  ]
+}

@@ -15,6 +15,8 @@
 #import "ChatViewController.h"
 #import "SettingViewController.h"
 #import "WeatherViewController.h"
+#import "SubLBXScanViewController.h"
+#import "PhotoViewController.h"
 @interface RootViewController ()<UITableViewDelegate, UITableViewDataSource, EMChatManagerDelegate,EMChatManagerBuddyDelegate>
 
 
@@ -68,6 +70,8 @@
         [_sideSlipView hide];
         if (indexPath.row == 0) {
             NSLog(@"我的二维码");
+            SubLBXScanViewController *subVC = [[SubLBXScanViewController alloc]init];
+            [self.navigationController pushViewController:subVC animated:YES];
         }
         if (indexPath.row == 1) {
             WeatherViewController *weatherVC = [[WeatherViewController alloc]init];
@@ -75,6 +79,10 @@
         }
         if (indexPath.row == 2) {
             NSLog(@"我的相册");
+            PhotoViewController *photoVC = [[PhotoViewController alloc]init];
+            [self.navigationController pushViewController:photoVC animated:YES];
+            
+
         }
         if (indexPath.row == 3) {
             NSLog(@"我的文件");
